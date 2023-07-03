@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador</title>
+</head>
+<body>
+    <h1>Buscador de Páginas</h1>
+
+    <form method="GET" action="{% url 'Buscador' %}">
+        <input type="text" name="q" placeholder="Buscar por nombre o IP">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <ul>
+    {% for pagina in pagina %}
+        <li>{{ pagina }}</li>
+    {% empty %}
+        <li>No se encontraron páginas</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

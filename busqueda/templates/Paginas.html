@@ -1,0 +1,11 @@
+{% extends "./base.html" %}
+
+{% block body %}
+<h1>Funciona</h1>
+    <ul>
+        {% for c in pagina %}
+        <li>{{c.Nombre}}</li>
+        <li>{{c.ip_nombre}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
